@@ -24,21 +24,19 @@ int main(){
 ios_base::sync_with_stdio(false);
 cin.tie(nullptr);
 ll n,p,q,ans=-1;
-// cin>>n>>p>>q;
-// ll a[n];
-// for(int i=0;i<n;i++){
-//     cin>>a[i];
-// }
-// sort(a,a+n);
-// for(int i=0;i<n;i++){
-//     if(q+a[i]<p){
-//         ans=a[i]+q;
-//         break;
-//     }
-// }
-// if(ans==-1)ans=p;
-// cout<<ans<<nl;
-vector<int>v{1,2,3},v1{1,2,3};
-if(v==v1)cout<<1<<nl;
+cin>>n>>p>>q;
+ll a[n];
+for(int i=0;i<n;i++){
+    cin>>a[i];
+}
+sort(a,a+n);
+for(int i=0;i<n;i++){
+    if(q+a[i]<p){
+        ans=a[i]+q;
+        break;
+    }
+}
+if(ans==-1)ans=p;
+cout<<ans<<nl;
 return 0;
 }
